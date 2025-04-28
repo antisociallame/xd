@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile>
+  <diagram name="Activity Diagram" id="sample-activity-diagram">
+    <mxGraphModel dx="827" dy="493" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Початок -->
+        <mxCell id="start" value="" style="ellipse;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="100" y="50" width="30" height="30" as="geometry"/>
+        </mxCell>
+
+        <!-- Дія 1 -->
+        <mxCell id="action1" value="Користувач відкриває додаток" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="80" y="120" width="150" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Стрілка від Початку до Дії 1 -->
+        <mxCell id="arrow1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="start" target="action1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Дія 2 -->
+        <mxCell id="action2" value="Користувач вибирає рейс" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="80" y="220" width="150" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Стрілка від Дії 1 до Дії 2 -->
+        <mxCell id="arrow2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="action1" target="action2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Умова -->
+        <mxCell id="decision1" value="Рейси знайдені?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="80" y="320" width="80" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- Стрілка від Дії 2 до Умови -->
+        <mxCell id="arrow3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="action2" target="decision1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Альтернативний потік (Ні) -->
+        <mxCell id="action3" value="Повідомлення 'Немає рейсів'" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="250" y="320" width="150" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Стрілка 'Ні' -->
+        <mxCell id="arrow4" value="ні" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="decision1" target="action3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="210" y="360" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Основний потік (Так) -->
+        <mxCell id="action4" value="Користувач оплачує квиток" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="80" y="450" width="150" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Стрілка 'Так' -->
+        <mxCell id="arrow5" value="так" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="decision1" target="action4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="120" y="400" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Кінець -->
+        <mxCell id="end" value="" style="ellipse;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="100" y="550" width="30" height="30" as="geometry"/>
+        </mxCell>
+
+        <!-- Стрілка від Дії 4 до Кінця -->
+        <mxCell id="arrow6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="action4" target="end">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
